@@ -1,0 +1,13 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="input-field col s4">
+  <input id="user_name" type="text" [(ngModel)]="login.userName"  class="validate">
+  <label for="user_name">User Name</label>
+</div>
+<div class="input-field col s4">
+  <input id="pass" type="password" [(ngModel)]="login.password" class="validate">
+  <label for="pass">pass</label>
+</div>
+<!--<button (click)="loginSubmit()">შესვლა</button>-->
+<a class="btn-flat btn-large waves-effect waves-light yellow" (click)="loginSubmit()"><i class="material-icons">child_care</i>შესვლა</a>
+<a class="btn-flat btn-large waves-effect waves-light green" ><i class="material-icons">child_care</i>პაროლის აღდგენა</a>

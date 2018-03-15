@@ -1,0 +1,71 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!------------>
+<main>
+  <div class=" container col s9" style="padding-top: 1em">
+      <a class="btn-flat btn-large waves-effect waves-light green" [routerLink]="'/auth'"><i class="material-icons">check_circle</i>შესვლა</a>
+      <a class="btn-flat btn-large waves-effect waves-light red" (click)="logout()"><i class="material-icons">child_care</i>გამოსვლა</a>
+    <div class="row">
+      <div class="input-field col s4">
+        <input id="first_name" type="text" [(ngModel)]="name" (keyup)="onKeyName($event)" class="validate">
+        <label for="first_name">სახელი</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="last_name" type="text" [(ngModel)]="lastName"  (keyup)="onKeyLastName($event)" class="validate">
+        <label for="last_name">გვარი</label>
+      </div>
+      <div class="input-field col s4">
+        <input id="phone" type="text" [(ngModel)]="phone" (keyup)="onKeyLastPhone($event)" class="validate">
+        <label for="phone">ტელეფონი</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s1">
+        <a class="btn-floating btn-large waves-effect waves-light red" (click)="onClick()" ><i class="material-icons">add</i></a>
+      </div>
+      <div class="col s1">
+        <a class="btn-floating btn-large waves-effect waves-light red" (click)="getContactByPhone(phone, name, lastName)" ><i class="material-icons">search</i></a>
+      </div>
+    </div>
+
+    <div class="row" style="overflow-x:auto">
+      <table class="responsive-table" >
+        <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Name</th>
+          <th>lastName</th>
+          <th>phone</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let obj of _ser.result">
+         <td><i class="material-icons" (click)="deleteContact(obj.id)">delete</i></td>
+           <td><i class="material-icons" (click)="updateContact(obj.id, obj.name, obj.lastName, obj.phone)">update</i></td>
+          <td contenteditable='true'>
+              <div > <input [(ngModel)]="obj.name"> </div>
+          </td>
+          <td contenteditable='true'>
+              <div> <input [(ngModel)]="obj.lastName"> </div>
+          </td>
+            <td contenteditable='true'>
+                <div> <input [(ngModel)]="obj.phone"> </div>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<footer class="page-footer footer">
+  <div class="footer-copyright">
+    <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
+
