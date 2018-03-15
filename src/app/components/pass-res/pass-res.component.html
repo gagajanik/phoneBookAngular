@@ -1,0 +1,11 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="input-field col s4">
+  <input id="mail" type="text" [(ngModel)]="mailObj.mail"  class="validate">
+  <label for="mail">mail</label>
+</div>
+<div class="input-field col s4">
+  <input id="pass" type="password" [(ngModel)]="mailObj.pass" class="validate">
+  <label for="pass">pass</label>
+</div>
+<a class="btn-flat btn-large waves-effect waves-light green" (click)="sendMail()" ><i class="material-icons">child_care</i>პაროლის აღდგენა</a>

@@ -12,6 +12,8 @@ import { MainComponent } from './components/main/main.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuthService} from './auth.service';
 import { WowComponent } from './components/wow/wow.component';
+import { PassResComponent } from './components/pass-res/pass-res.component';
+import {PassResService} from './service/pass-res.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { WowComponent } from './components/wow/wow.component';
     AppComponent,
     AuthComponent,
     MainComponent,
-    WowComponent
+    WowComponent,
+    PassResComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { WowComponent } from './components/wow/wow.component';
     HttpClientModule,
     RoutingModule
   ],
-  providers: [PersonService, AuthService],
+  providers: [PersonService, AuthService, PassResService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

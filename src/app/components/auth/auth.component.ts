@@ -1,7 +1,7 @@
-import {Component, OnInit} from "@angular/core";
-import {AuthService} from "../../auth.service";
-import {PersonService} from "../../person/person.service";
-import {Router} from "@angular/router";
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../auth.service';
+import {PersonService} from '../../person/person.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-auth',
