@@ -76,7 +76,7 @@ export class MainComponent implements OnInit {
   }
   deleteContact(id) {
     this._ser.delteContact(id).subscribe();
-    alert('მონაცემი წაიშალა!');
+    alert('მონაცემი წაიშალა!!!');
     this.getAll();
   }
   updateContact(id, name, lastName, phone) {
