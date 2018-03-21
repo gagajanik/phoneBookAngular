@@ -14,6 +14,8 @@ import {AuthService} from './auth.service';
 import { WowComponent } from './components/wow/wow.component';
 import { PassResComponent } from './components/pass-res/pass-res.component';
 import {PassResService} from './service/pass-res.service';
+import { RegistrationComponent } from './components/registration/registration.component';
+import {RegisterService} from "./service/register.service";
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import {PassResService} from './service/pass-res.service';
     AuthComponent,
     MainComponent,
     WowComponent,
-    PassResComponent
+    PassResComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,7 @@ import {PassResService} from './service/pass-res.service';
     HttpClientModule,
     RoutingModule
   ],
-  providers: [PersonService, AuthService, PassResService],
+  providers: [PersonService, AuthService, PassResService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

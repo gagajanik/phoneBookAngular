@@ -1,0 +1,15 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="input-field col s4">
+  <input id="user_name" type="text" [(ngModel)]="regObj.userName"  class="validate">
+  <label for="user_name">User Name</label>
+</div>
+<div class="input-field col s4">
+  <input id="pass" type="password" [(ngModel)]="regObj.password" class="validate">
+  <label for="pass">password</label>
+</div>
+<div class="input-field col s4">
+  <input id="userRole" type="password" [(ngModel)]="regObj.userRole" class="validate">
+  <label for="userRole">User Role</label>
+</div>
+<a class="btn-flat btn-large waves-effect waves-light green" (click)="registerSubmit()"><i class="material-icons">check</i>რეგისტრაცია</a>
