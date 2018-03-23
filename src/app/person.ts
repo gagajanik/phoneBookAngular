@@ -3,4 +3,5 @@ export interface Person {
   lastName: String;
   phone: String;
   id: number;
+  status: number;
 }

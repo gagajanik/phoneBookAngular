@@ -69,5 +69,8 @@ export class PersonService {
     updateContact(id, name, lastName, phone) {
         return this.http.put('api/updateContact', {id: id, name: name, lastName: lastName, phone: phone});
     }
+    updateStatus(status, id) {
+        return this.http.put('api/updateStatus', {status: status, id: id});
+    }
 
 }

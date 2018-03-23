@@ -14,7 +14,8 @@ export class MainComponent implements OnInit {
     id : '',
     name : '',
     lastName : '',
-    phone : ''
+    phone : '',
+    status
 };
   sessData ;
   phone = '';
@@ -89,6 +90,13 @@ export class MainComponent implements OnInit {
   logout() {
     this.auth.logout();
     this.router.navigate(['/auth']);
+  }
+
+  updateStatus(status, id) {
+    this._ser.updateStatus((status === 0) ? 1 : 0, id).subscribe(res => {
+      this.getAll();
+      alert((status === 0) ? 'აქტივაცია' : 'დეაქტივაცია');
+    });
   }
 
 }

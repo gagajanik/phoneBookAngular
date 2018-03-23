@@ -33,14 +33,17 @@
         <tr>
           <th></th>
           <th></th>
+          <th></th>
           <th>Name</th>
           <th>lastName</th>
           <th>phone</th>
+          <th>status</th>
         </tr>
         </thead>
 
         <tbody>
         <tr *ngFor="let obj of _ser.result">
+          <td><i class="material-icons" (click)="updateStatus(obj.status, obj.id)">check</i></td>
          <td><i class="material-icons" (click)="deleteContact(obj.id)">delete</i></td>
            <td><i class="material-icons" (click)="updateContact(obj.id, obj.name, obj.lastName, obj.phone)">update</i></td>
           <td contenteditable='true'>
@@ -52,6 +55,9 @@
             <td contenteditable='true'>
                 <div> <input [(ngModel)]="obj.phone"> </div>
             </td>
+          <td contenteditable='true'>
+            <div> <input [(ngModel)]="obj.status"> </div>
+          </td>
         </tr>
         </tbody>
       </table>
